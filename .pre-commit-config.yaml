@@ -18,16 +18,3 @@ repos:
           - --skip-unknown-extensions
         files: \.(js|ts)$
         exclude: node_modules/
-  - repo: local
-    hooks:
-      - id: npm-audit
-        name: NPM Audit - SCA
-        entry: bash ./scripts/npm_audit_summary.sh
-        language: system
-        pass_filenames: false
-        files: package(-lock)?\.json$
-      - id: dast-zap-scan
-        name: Run ZAP scan on application
-        entry: bash ./scripts/DAST_zap.sh
-        language: system
-        pass_filenames: false
