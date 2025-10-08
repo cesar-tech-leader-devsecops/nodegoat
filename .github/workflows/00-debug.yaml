@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - main
+      - dev
 
 # Cancel previous runs if a new commit is pushed to the same PR
 concurrency:
